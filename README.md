@@ -1,4 +1,4 @@
-# Ditching jQuery Labs
+# The Vanilla JS Guidebook Labs
 Practice the vanilla JavaScript techniques you learned in the guide.
 
 ## Selectors
@@ -54,13 +54,6 @@ Practice the vanilla JavaScript techniques you learned in the guide.
 2. Add to the existing HTML with a short note about chips.
 
 
-## Climbing Up the DOM
-
-1. Get the element with an ID of `#d3`.
-2. Get all of the elements parents.
-3. Add the `.bg-green` class to all of them until you get to the `document.body`.
-
-
 ## Forms
 
 1. Get all form elements.
@@ -68,3 +61,51 @@ Practice the vanilla JavaScript techniques you learned in the guide.
 3. if the form is a checkbox, check it.
 4. If it's a radio button, check if it's the selected option. If it is, log the value in the console.
 5. If it's a textarea, give it a value.
+
+
+## Traversing Up the DOM
+
+1. Get the element with an ID of `#d3`.
+2. Get all of the elements parents.
+3. Add the `.bg-green` class to all of them until you get to the `document.body`.
+
+
+## Traversing Down the DOM
+
+1. Get the element with an ID of `#wrapper`.
+2. Get all of the direct decendants only.
+3. Log the decendants in the console
+
+
+## Traversing Sideways in the DOM
+
+1. Get the list item with an ID of #item-3
+2. Get all of that list item's siblings
+3. Log the siblings in the console
+
+
+## Merging Arrays and Objects
+
+1. Add two of your favorite books to the array of books.
+2. Add a new key, `balloons`, to the `partyList` object, with a balloon color
+3. Merge the `partyListUpdated` object with the `partyList` object, and don't loose any of the keys or values.
+4. Log `books` and the complete party list to the console.
+
+
+## Viewport
+
+1. Whenever a div with the .find-me class enters the viewport, change it's background color to `purple` and it's color to white.
+
+
+## Distances
+
+1. Get every element on the page with a class of `.find-me`.
+2. For each element, calculate it's distance from the top of the page.
+3. Log that distance in the console.
+
+
+## Ajax/HTTP
+
+1. Get the [data-photo-album] container from the DOM.
+2. Get photos from https://jsonplaceholder.typicode.com/.
+3. Display the first 10 photos in the photo album container (nothing fancy, just one after the other).

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Ditching jQuery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<p>Hello, world!</p>
+
+
+		<!-- Scripts -->
+		<script>
+			var books = [
+				'Harry Potter',
+				'Of Mice and Men',
+				'Presentation Zen',
+				'The DaVinci Code'
+			];
+
+			var partyList = {
+				cake: 'chocolate',
+				food: {
+					pizza: true,
+					sandwiches: false,
+					chips: 'Cape Cod',
+					wings: 42
+				},
+				drinks: {
+					soda: true,
+					juice: true,
+					beer: false
+				},
+				presents: {
+					tv: 'Samsung',
+					tablet: 'iPad Mini',
+					watch: 'Cheap Timex'
+				}
+			};
+
+			var partyListUpdated = {
+				food: {
+					sandwiches: 'Turkey and Tuna'
+				},
+				drinks: {
+					wine: true,
+					water: 'tap'
+				},
+				presents: {
+					tablet: false,
+					books: 'Complete Harry Potter Box Set'
+				},
+				venue: 'Backyard Cookout'
+			};
+
+			// 1. Add two of your favorite books to the array of books.
+			books.push( 'The Hitchhikers Guide to the Galaxy', 'Did I mention Harry Potter?' );
+
+			// 2. Add a new key, `balloons`, to the partyList object, with a balloon color
+			partyList.baloons = 'blue';
+
+			// 3. Merge the partyListUpdated object with the partyList object, and don't loose any of the keys or values.
+			/**
+			 * Merge two or more objects. Returns a new object.
+			 * Set the first argument to `true` for a deep or recursive merge
+			 * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
+			 * @param {Object}   objects  The objects to merge together
+			 * @returns {Object}          Merged values of defaults and options
+			 */
+			var extend = function () {
+
+			    // Variables
+			    var extended = {};
+			    var deep = false;
+			    var i = 0;
+			    var length = arguments.length;
+
+			    // Check if a deep merge
+			    if ( Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ) {
+			        deep = arguments[0];
+			        i++;
+			    }
+
+			    // Merge the object into the extended object
+			    var merge = function ( obj ) {
+			        for ( var prop in obj ) {
+			            if ( Object.prototype.hasOwnProperty.call( obj, prop ) ) {
+			                // If deep merge and property is an object, merge properties
+			                if ( deep && Object.prototype.toString.call(obj[prop]) === '[object Object]' ) {
+			                    extended[prop] = extend( true, extended[prop], obj[prop] );
+			                } else {
+			                    extended[prop] = obj[prop];
+			                }
+			            }
+			        }
+			    };
+
+			    // Loop through each object and conduct a merge
+			    for ( ; i < length; i++ ) {
+			        var obj = arguments[i];
+			        merge(obj);
+			    }
+
+			    return extended;
+
+			};
+
+			var completePartyList = extend(true, partyList, partyListUpdated);
+
+			// 4. Log books and the complete party list to the console.
+			console.log(books);
+			console.log(completePartyList);
+		</script>
+	</body>
+</html>

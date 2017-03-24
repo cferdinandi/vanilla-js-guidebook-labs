@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Ditching jQuery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<p>Hello, world!</p>
+
+
+		<!-- Scripts -->
+		<script>
+			// 1. Add two of your favorite books to the array of books.
+			// 2. Add a new key, `balloons`, to the partyList object, with a balloon color
+			// 3. Merge the partyListUpdated object with the partyList object, and don't loose any of the keys or values.
+			// 4. Log books and the complete party list to the console.
+
+			var books = [
+				'Harry Potter',
+				'Of Mice and Men',
+				'Presentation Zen',
+				'The DaVinci Code'
+			];
+
+			var partyList = {
+				cake: 'chocolate',
+				food: {
+					pizza: true,
+					sandwiches: false,
+					chips: 'Cape Cod',
+					wings: 42
+				},
+				drinks: {
+					soda: true,
+					juice: true,
+					beer: false
+				},
+				presents: {
+					tv: 'Samsung',
+					tablet: 'iPad Mini',
+					watch: 'Cheap Timex'
+				}
+			};
+
+			var partyListUpdated = {
+				food: {
+					sandwiches: 'Turkey and Tuna'
+				}
+				drinks: {
+					wine: true,
+					water: 'tap'
+				},
+				presents: {
+					tablet: false,
+					books: 'Complete Harry Potter Box Set'
+				},
+				venue: 'Backyard Cookout'
+			};
+		</script>
+	</body>
+</html>
