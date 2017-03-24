@@ -106,6 +106,6 @@ Practice the vanilla JavaScript techniques you learned in the guide.
 
 ## Ajax/HTTP
 
-1. Get the [data-photo-album] container from the DOM.
+1. Get the `[data-photo-album]` container from the DOM.
 2. Get photos from https://jsonplaceholder.typicode.com/.
 3. Display the first 10 photos in the photo album container (nothing fancy, just one after the other).
