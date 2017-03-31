@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Lab: Cookies Answers | The Vanilla JS Guidebook</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+			<div><p>Hello, world!</p></div>
+
+
+			<!-- Scripts -->
+			<script>
+				// NOTE: Google Chrome does not store cookies on localhost. For this exercise, use Firefox, Safari, or MS Edge.
+				// 1. Set a cookie with your favorite band name.
+				document.cookie = 'band=Kendrick Lamar';
+
+				// 2. Get the cookie value and log it in the console.
+				var getCookie = function (name) {
+					var value = "; " + document.cookie;
+					var parts = value.split("; " + name + "=");
+					if (parts.length == 2) return parts.pop().split(";").shift();
+				};
+				var band = getCookie( 'band' );
+				console.log( band );
+			</script>
+		</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Lab: Adding an element to the DOM Answers | The Vanilla JS Guidebook</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			div {
+				background-color: #f7f7f7;
+				margin: 0 0 1em;
+				padding: 0.5em 1em;
+			}
+
+			.bg-red,
+			.bg-blue,
+			.bg-navy {
+				color: #ffffff;
+			}
+
+			.bg-red {
+				background-color: #cb070e;
+			}
+
+			.bg-blue {
+				background-color: #0088cc;
+			}
+
+			.bg-navy {
+				background-color: #343d4d;
+			}
+		</style>
+	</head>
+
+	<body>
+
+			<div><p>Hello, world!</p></div>
+
+
+			<!-- Scripts -->
+			<script>
+				// 1. Add a <div> after the existing one that says, "Take me to your leader."
+				var targetDiv = document.querySelector( 'div' );
+				var newDiv = document.createElement( 'div' );
+				newDiv.innerHTML = 'Take me to your leader.';
+				targetDiv.parentNode.insertBefore( newDiv, targetDiv.nextSibling );
+
+				// 2. Give it a class of .bg-red.
+				newDiv.className = 'bg-red';
+
+				// 3. Add a <p> after the existing one in the <div> that says, "Is this thing on?"
+				var targetP = document.querySelector( 'div p' );
+				var newP = document.createElement( 'p' );
+				newP.innerHTML = 'Is this thing on?';
+				targetP.parentNode.insertBefore( newP, targetP );
+
+				// 4. Use inline styling to give a background color of purple and a color of white.
+				newP.style.backgroundColor = 'purple';
+				newP.style.color = 'white';
+			</script>
+		</body>
+</html>
